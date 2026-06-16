@@ -1,6 +1,13 @@
 # BigQuery Release Notes Explorer & Tweet Composer
 
-A sleek, modern web application built using Python Flask, plain HTML, CSS, and JavaScript. It fetches the latest Google Cloud BigQuery release notes, parses them into granular updates, allows keyword searching and category filtering, and integrates a customized Tweet Composer with character-count analytics to draft and post updates on X/Twitter.
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/prsquared/antigravity-event-talks-app)
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
+[![Flask Version](https://img.shields.io/badge/flask-3.0%2B-green)](https://flask.palletsprojects.com/)
+
+A sleek, modern web application built using Python Flask, plain HTML, CSS, and JavaScript. It fetches the latest Google Cloud BigQuery release notes, parses them into granular updates, allows keyword searching and category filtering, and integrates a customized Tweet Composer with character-count analytics to draft and post updates on X (Twitter).
+
+The repository has been successfully pushed and is hosted on GitHub at:
+👉 **[https://github.com/prsquared/antigravity-event-talks-app](https://github.com/prsquared/antigravity-event-talks-app)**
 
 ## Features
 
@@ -22,6 +29,12 @@ A sleek, modern web application built using Python Flask, plain HTML, CSS, and J
 - `templates/index.html`: Dashboard template containing HTML structures, filters, lists, and the modal dialog.
 - `static/css/styles.css`: CSS styles defining CSS color variables, grids, badging, overlays, progress rings, and animations.
 - `static/js/app.js`: Client-side logic for fetching, rendering, filtering, searching, and managing the Tweet composer.
+
+---
+
+## Technical Details
+
+For a deeper look into the code, architecture, and step-by-step request-response flow of this application, please refer to our internal [Technical Architecture Guide](file:///C:/Users/geetu/.gemini/antigravity-cli/brain/cf158af9-1659-46af-a2b1-5a4443366aa7/project_architecture_guide.md).
 
 ---
 
