@@ -48,6 +48,91 @@
     --radius-full: 9999px;
 }
 
+/* Light Theme Variables Overrides */
+body.light-theme {
+    --bg-primary: #f9fafb;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f3f4f6;
+    --border-color: #e5e7eb;
+    --border-glow: rgba(59, 130, 246, 0.08);
+    
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .card-content code {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #1f2937;
+    border-color: #e5e7eb;
+}
+
+body.light-theme .alert-banner.warning {
+    color: #b45309;
+    background-color: rgba(217, 119, 6, 0.1);
+    border-color: rgba(217, 119, 6, 0.2);
+}
+
+body.light-theme .empty-state {
+    background-color: #ffffff;
+}
+
+body.light-theme .mock-link-preview {
+    background-color: #f9fafb;
+}
+
+body.light-theme .tweet-textarea {
+    color: #111827;
+}
+
+body.light-theme .progress-ring__circle-bg {
+    stroke: #e5e7eb;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    border-radius: var(--radius-full);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-fast);
+}
+
+.theme-toggle-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+}
+
+.theme-toggle-btn .icon-sun {
+    display: none;
+}
+
+.theme-toggle-btn .icon-moon {
+    display: block;
+}
+
+body.light-theme .theme-toggle-btn .icon-sun {
+    display: block;
+    color: #f59e0b;
+}
+
+body.light-theme .theme-toggle-btn .icon-moon {
+    display: none;
+}
+
 /* Base resets & layout */
 * {
     box-sizing: border-box;

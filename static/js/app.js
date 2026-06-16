@@ -7,6 +7,7 @@ let selectedUpdate = null;
 // DOM Elements
 const refreshBtn = document.getElementById('refresh-btn');
 const exportCsvBtn = document.getElementById('export-csv-btn');
+const themeToggleBtn = document.getElementById('theme-toggle-btn');
 const searchInput = document.getElementById('search-input');
 const clearSearchBtn = document.getElementById('clear-search-btn');
 const typeFilters = document.getElementById('type-filters');
@@ -44,6 +45,12 @@ const TWITTER_SHORT_URL_LENGTH = 23; // Twitter counts all URLs as 23 chars
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
+    // Load and Apply Saved Theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+    }
+
     // Fetch release notes on load
     fetchReleases();
 
@@ -51,6 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
     refreshBtn.addEventListener('click', () => fetchReleases(true));
     if (exportCsvBtn) {
         exportCsvBtn.addEventListener('click', exportToCSV);
+    }
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            const currentTheme = document.body.classList.contains('light-theme') ? 'light' : 'dark';
+            localStorage.setItem('theme', currentTheme);
+        });
     }
     
     searchInput.addEventListener('input', (e) => {
